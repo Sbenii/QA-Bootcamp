@@ -163,7 +163,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Create a user",
 			"id": "3e888b45-84dc-4cf3-b094-08e59277a049",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -187,6 +187,31 @@
 					}
 				},
 				"url": "{{base_url}}api/uses"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"id": "96711d0e-171d-452b-a42e-ccf9ba245237",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "{{base_url}}api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user (patch)",
+			"id": "8da9087c-b61f-44f2-8cec-f56289d9c011",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": []
 			},
 			"response": []
 		}
