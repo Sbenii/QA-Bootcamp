@@ -198,7 +198,13 @@
 			},
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
 				"url": "{{base_url}}api/users/2"
 			},
 			"response": []
@@ -211,7 +217,41 @@
 			},
 			"request": {
 				"method": "PATCH",
-				"header": []
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n}"
+				},
+				"url": "{{base_url}}api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"id": "228963f5-dd79-4cad-af31-2cbdf327e5da",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n}"
+				},
+				"url": "{{base_url}}api/users/2"
 			},
 			"response": []
 		}
