@@ -314,8 +314,74 @@
 			},
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"eve.holt@reqres.in\",\n    \"password\": \"cityslicka\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": "{{base_url}}api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Login-unsuccessful",
+			"id": "98050d23-1701-45ec-8f96-e65d9dcdee98",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"peter@klaven\"\n}"
+				},
+				"url": "{{base_url}}api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Delayed response",
+			"id": "63c0971c-2d6d-4af7-a7b3-db066a4640d1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}\n/api/users?delay=",
+					"host": [
+						"{{base_url}}\n"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "delay",
+							"value": ""
+						}
+					]
+				}
 			},
 			"response": []
 		}
