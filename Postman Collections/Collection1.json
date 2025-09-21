@@ -115,8 +115,8 @@
 					"script": {
 						"id": "8c13f02a-a5af-4f37-a6d5-69e2011fe105",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
 							"});"
 						],
 						"type": "text/javascript",
@@ -126,7 +126,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "252912b6-59ac-4874-930e-2d51a3ac5a5b",
+						"id": "100dca62-df39-4100-966e-33d0a080b226",
 						"exec": [],
 						"type": "text/javascript"
 					}
@@ -170,6 +170,29 @@
 		},
 		{
 			"name": "List resource not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3fbd649e-7eed-4263-a0e7-e5b852831b3b",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "312a1075-5306-4eff-81db-0d99bfb54d5e",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "8a822414-1532-4ac0-b845-e09d2dff35b4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -189,6 +212,29 @@
 		},
 		{
 			"name": "Create a user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "794c8507-27ff-45d7-87b9-4fd341caea77",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b727f7ba-543e-4fa8-a634-d98c4dda4c25",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "3e888b45-84dc-4cf3-b094-08e59277a049",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -217,6 +263,29 @@
 		},
 		{
 			"name": "Update user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d88685d-a33c-4850-b957-fc5863def5f2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "df3ead7c-3e60-487e-ba18-6f28cfc8caf9",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "96711d0e-171d-452b-a42e-ccf9ba245237",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -236,6 +305,29 @@
 		},
 		{
 			"name": "Update user (patch)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7589683-cabd-49a0-b981-07fd82acf8db",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dd810297-0d79-40b3-b6ba-59db19a76479",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "8da9087c-b61f-44f2-8cec-f56289d9c011",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -259,6 +351,29 @@
 		},
 		{
 			"name": "Delete user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f29cd08-a2f6-4ac1-b797-84a1126aa709",
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9a917637-b3b6-4d8d-9754-62a756335b17",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "228963f5-dd79-4cad-af31-2cbdf327e5da",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
