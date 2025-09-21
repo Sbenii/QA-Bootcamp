@@ -254,6 +254,70 @@
 				"url": "{{base_url}}api/users/2"
 			},
 			"response": []
+		},
+		{
+			"name": "Register-successfully",
+			"id": "04fe376e-328a-445c-bdea-cb4313db9ad7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"eve.holt@reqres.in\",\n    \"password\": \"pistol\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Register unsuccessful",
+			"id": "14fd4d4e-7d77-4670-a5bc-055aef06bb61",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"sydney@fife\"\n}"
+				},
+				"url": "{{base_url}}api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login-successfullt",
+			"id": "6102a915-e264-4b06-adca-27c6c750d87d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{base_url}}api/login"
+			},
+			"response": []
 		}
 	]
 }
