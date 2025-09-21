@@ -6,7 +6,33 @@
 	},
 	"item": [
 		{
-			"name": "New Request",
+			"name": "Google",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac489251-57a1-4bd3-9a32-4faab7dc0921",
+						"exec": [
+							"pm.test(\"Google responds with 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.above(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "da4005b3-fc78-4c73-9bc6-47d93c4bfd87",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "2a065fd0-4ce9-4ae8-bd89-f1130ac6a44e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
@@ -15,7 +41,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "twitter.com"
+				"url": "google.com"
 			},
 			"response": []
 		}
