@@ -9,24 +9,13 @@
 			"name": "New Request",
 			"id": "2a065fd0-4ce9-4ae8-bd89-f1130ac6a44e",
 			"protocolProfileBehavior": {
-				"disableBodyPruning": true
+				"disableBodyPruning": true,
+				"followRedirects": true
 			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "google.com?q",
-					"host": [
-						"google",
-						"com"
-					],
-					"query": [
-						{
-							"key": "q",
-							"value": null
-						}
-					]
-				}
+				"url": "twitter.com"
 			},
 			"response": []
 		}
