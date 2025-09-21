@@ -365,20 +365,25 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{base_url}}\n/api/users?delay=",
+					"raw": "{{base_url}}api/users?delay=3",
 					"host": [
-						"{{base_url}}\n"
+						"{{base_url}}api"
 					],
 					"path": [
-						"api",
 						"users"
 					],
 					"query": [
 						{
 							"key": "delay",
-							"value": ""
+							"value": "3"
 						}
 					]
 				}
