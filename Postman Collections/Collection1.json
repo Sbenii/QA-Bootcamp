@@ -425,6 +425,29 @@
 		},
 		{
 			"name": "Register unsuccessful",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "114a8254-c84f-4d72-8b8d-c46fae7229a5",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b3852bfd-50b7-47a4-8f25-88bd38120d29",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "14fd4d4e-7d77-4670-a5bc-055aef06bb61",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -448,6 +471,29 @@
 		},
 		{
 			"name": "Login-successfullt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4fd22add-fd4f-4b98-964e-518a721924ee",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1c0f63a8-fc3b-463c-b228-597936a7a08f",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "6102a915-e264-4b06-adca-27c6c750d87d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -476,6 +522,29 @@
 		},
 		{
 			"name": "Login-unsuccessful",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "671e4cd0-501f-4bc6-9265-ee5f7287d8a4",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "96fa3035-692b-4e52-a1ad-16d84029689f",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "98050d23-1701-45ec-8f96-e65d9dcdee98",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
