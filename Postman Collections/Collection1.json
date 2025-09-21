@@ -13,12 +13,7 @@
 					"script": {
 						"id": "ac489251-57a1-4bd3-9a32-4faab7dc0921",
 						"exec": [
-							"// pm.test(\"Google responds with 200\", function () {",
-							"//     pm.response.to.have.status(200);",
-							"// });",
-							"// pm.test(\"Response time is less than 200ms\", function () {",
-							"//     pm.expect(pm.response.responseTime).to.be.above(200);",
-							"// });"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -122,24 +117,6 @@
 					}
 				],
 				"url": "{{base_url}}api/unknown/2"
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"id": "5b27b519-7177-427e-87d1-875e36c179fd",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "reqres-free-v1",
-						"type": "text"
-					}
-				]
 			},
 			"response": []
 		},
@@ -389,6 +366,32 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7d9fd8a1-0fb9-43aa-b98e-2307663d3a6f",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "357f383a-2950-471c-9626-876d1331f038",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
 		}
 	]
 }
