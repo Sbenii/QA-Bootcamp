@@ -13,7 +13,9 @@
 					"script": {
 						"id": "ac489251-57a1-4bd3-9a32-4faab7dc0921",
 						"exec": [
-							""
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -65,6 +67,29 @@
 		},
 		{
 			"name": "List single user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "574e64dc-b380-4e11-9ed8-83755cfdc382",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b946df14-d66e-4bab-9b20-adc8987576f5",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "e84ff85d-2563-4572-8f2f-cd18d07ef8f8",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -84,6 +109,29 @@
 		},
 		{
 			"name": "List a user not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8c13f02a-a5af-4f37-a6d5-69e2011fe105",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "252912b6-59ac-4874-930e-2d51a3ac5a5b",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "cdf1ab0b-ad28-41e4-87da-4c02f9e7a822",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -372,7 +420,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "7d9fd8a1-0fb9-43aa-b98e-2307663d3a6f",
+				"id": "8e1b6c94-cf53-4b99-b6f3-b1faecad5912",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -383,12 +431,12 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "357f383a-2950-471c-9626-876d1331f038",
+				"id": "836245a2-9934-400f-91c3-b6b3031559db",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
+					"pm.test(\"Response time is less than 1 sec\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(1000);",
 					"});"
 				]
 			}
