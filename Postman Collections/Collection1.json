@@ -107,7 +107,7 @@
 			"response": []
 		},
 		{
-			"name": "List all resources",
+			"name": "List single resource",
 			"id": "e234301b-5c2f-4acc-900d-fc8c05f4bc3d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -121,19 +121,72 @@
 						"type": "text"
 					}
 				],
-				"url": "{{base_url}}api/unknown"
+				"url": "{{base_url}}api/unknown/2"
 			},
 			"response": []
 		},
 		{
 			"name": "New Request",
+			"id": "5b27b519-7177-427e-87d1-875e36c179fd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				]
+			},
+			"response": []
+		},
+		{
+			"name": "List resource not found",
 			"id": "8a822414-1532-4ac0-b845-e09d2dff35b4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"url": "{{base_url}}api/unknown/23"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "3e888b45-84dc-4cf3-b094-08e59277a049",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}api/uses"
 			},
 			"response": []
 		}
