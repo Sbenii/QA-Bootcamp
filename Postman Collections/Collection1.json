@@ -31,6 +31,10 @@
 							"pm.test(\"Correct entries per page\", function () {",
 							"    var jsondata = pm.response.json();",
 							"    pm.expect(jsondata.per_page).to.eql(6);",
+							"});",
+							"pm.test(\"Correct first user id\", function () {",
+							"    var j = pm.response.json();",
+							"    pm.expect(j.data[0].id).to.eql(7);",
 							"});"
 						],
 						"type": "text/javascript",
