@@ -137,10 +137,15 @@
 					"script": {
 						"id": "b946df14-d66e-4bab-9b20-adc8987576f5",
 						"exec": [
-							"// const randomValue = Math.floor(Math.random() * 12) + 1;",
-							"// pm.environment.set(\"UserId\", randomValue);",
-							"var randomValue=[];",
-							"for (let x=1,x<)"
+							"const randomValue = Math.floor(Math.random() * 12) + 1;",
+							"pm.environment.set(\"UserId\", randomValue);",
+							"// let randomvalue = [];",
+							"// for (let x = 1; x <= 12; x++) {",
+							"//     randomvalue[x] = x ;",
+							"// }",
+							"// const idx = Math.floor(Math.random() * randomvalue.length);",
+							"// const picked = randomvalue[idx];",
+							"// console.log(\"Random pick:\", picked);"
 						],
 						"type": "text/javascript",
 						"packages": {}
