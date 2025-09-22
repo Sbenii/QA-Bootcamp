@@ -137,8 +137,10 @@
 					"script": {
 						"id": "b946df14-d66e-4bab-9b20-adc8987576f5",
 						"exec": [
-							"const randomvalue=Math.r",
-							"pm.environment.set(\"UserId\", 2);"
+							"// const randomValue = Math.floor(Math.random() * 12) + 1;",
+							"// pm.environment.set(\"UserId\", randomValue);",
+							"var randomValue=[];",
+							"for (let x=1,x<)"
 						],
 						"type": "text/javascript",
 						"packages": {}
