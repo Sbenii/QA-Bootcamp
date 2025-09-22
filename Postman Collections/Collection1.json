@@ -179,6 +179,10 @@
 						"exec": [
 							"pm.test(\"Status code is 404\", function () {",
 							"    pm.response.to.have.status(404);",
+							"});",
+							"pm.test(\"Check of JSON response is emty\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.be.empty;",
 							"});"
 						],
 						"type": "text/javascript",
@@ -189,8 +193,11 @@
 					"listen": "prerequest",
 					"script": {
 						"id": "100dca62-df39-4100-966e-33d0a080b226",
-						"exec": [],
-						"type": "text/javascript"
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -333,6 +340,10 @@
 						"exec": [
 							"pm.test(\"Status code is 404\", function () {",
 							"    pm.response.to.have.status(404);",
+							"});",
+							"pm.test(\"Check of JSON response is emty\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.be.empty;",
 							"});"
 						],
 						"type": "text/javascript",
@@ -527,8 +538,11 @@
 					"listen": "prerequest",
 					"script": {
 						"id": "9a917637-b3b6-4d8d-9754-62a756335b17",
-						"exec": [],
-						"type": "text/javascript"
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
