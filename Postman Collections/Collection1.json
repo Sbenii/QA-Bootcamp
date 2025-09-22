@@ -803,7 +803,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "2a6f2e38-660e-4080-98b1-d49aefc47356",
+				"id": "f54f6801-f2c4-49dc-a79f-93476b11a81e",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -814,13 +814,13 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "3edae236-0977-408d-9ab1-8f16c9d7a33f",
+				"id": "d10ee57f-fe4c-42ea-a621-cd5bd72c6cf7",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
 					"pm.test(\"Response Time is less than 1 second\", function () {",
 					"const currentRequestName = pm.info.requestName;",
-					"if (currentRequestName === \"Delayed Response\") {",
+					"if (currentRequestName === \"Delayed response\") {",
 					"console.log(\"Skipping 'Response Time is less than 1 second' test for this request.\");",
 					"return;",
 					"}",
