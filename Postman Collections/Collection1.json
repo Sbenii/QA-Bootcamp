@@ -112,7 +112,12 @@
 							"pm.test(\"Checking if fields: id, email, first_name, last_name and avatar exists\", function () {",
 							"    var Fields = pm.response.json();",
 							"    pm.expect(Fields.data.id).to.exist;",
-							"});"
+							"    pm.expect(Fields.data.email).to.exist;",
+							"    pm.expect(Fields.data.first_name).to.exist;",
+							"    pm.expect(Fields.data.last_name).to.exist;",
+							"    pm.expect(Fields.data.avatar).to.exist;",
+							"});",
+							"pm.test()"
 						],
 						"type": "text/javascript",
 						"packages": {}
