@@ -36,8 +36,19 @@
 							"    var j = pm.response.json();",
 							"    pm.expect(j.data[0].id).to.eql(7);",
 							"});",
-							"var i=pm.response.json()",
-							"for ()"
+							"pm.test(\"If a user called george exists\", function () {",
+							"    var j = pm.response.json();",
+							"    const array=j.data;",
+							"    let george=false;",
+							"    for (let i=0;i<array.length;++i){",
+							"        if (array[i].first_name=='George'){",
+							"            george=true;",
+							"            break;",
+							"        }",
+							"    }",
+							"    pm.expect(george).to.eql(true)",
+							"",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -97,7 +108,8 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"});"
+							"});",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -107,8 +119,11 @@
 					"listen": "prerequest",
 					"script": {
 						"id": "b946df14-d66e-4bab-9b20-adc8987576f5",
-						"exec": [],
-						"type": "text/javascript"
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
