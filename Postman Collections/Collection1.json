@@ -35,7 +35,9 @@
 							"pm.test(\"Correct first user id\", function () {",
 							"    var j = pm.response.json();",
 							"    pm.expect(j.data[0].id).to.eql(7);",
-							"});"
+							"});",
+							"var i=pm.response.json()",
+							"for ()"
 						],
 						"type": "text/javascript",
 						"packages": {}
