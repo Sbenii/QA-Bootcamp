@@ -176,8 +176,8 @@
 					"script": {
 						"id": "3fbd649e-7eed-4263-a0e7-e5b852831b3b",
 						"exec": [
-							"pm.test(\"Status code is 400\", function () {",
-							"    pm.response.to.have.status(400);",
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
 							"});"
 						],
 						"type": "text/javascript",
@@ -188,8 +188,11 @@
 					"listen": "prerequest",
 					"script": {
 						"id": "312a1075-5306-4eff-81db-0d99bfb54d5e",
-						"exec": [],
-						"type": "text/javascript"
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -568,6 +571,29 @@
 		},
 		{
 			"name": "Delayed response",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1b74413-705c-4cc3-a7f8-87478e1aed5f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "67055c9c-94d5-4c93-b46a-ce327945cb76",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "63c0971c-2d6d-4af7-a7b3-db066a4640d1",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
