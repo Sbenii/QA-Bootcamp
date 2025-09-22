@@ -122,9 +122,10 @@
 							"    let emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;",
 							"    pm.expect(mail.data.email).to.match(emailRegex)",
 							"})",
-							"pm.test(\"Y\", function () {",
+							"pm.test(\"Correct user fetched\", function () {",
+							"    var ID =pm.environment.get(\"UserId\");",
 							"    var userid = pm.response.json();",
-							"    pm.expect(jsonData.value).to.eql(100);",
+							"    pm.expect(userid.data.id).to.eql(ID);",
 							"});"
 						],
 						"type": "text/javascript",
@@ -136,6 +137,7 @@
 					"script": {
 						"id": "b946df14-d66e-4bab-9b20-adc8987576f5",
 						"exec": [
+							"const randomvalue=Math.r",
 							"pm.environment.set(\"UserId\", 2);"
 						],
 						"type": "text/javascript",
