@@ -106,17 +106,17 @@
 					"script": {
 						"id": "574e64dc-b380-4e11-9ed8-83755cfdc382",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Status code = 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"// pm.test(\"Checking if fields: id, email, first_name, last_name and avatar exists\", function () {",
-							"//     var Fields = pm.response.json();",
-							"//     pm.expect(Fields.data.id).to.exist;",
-							"//     pm.expect(Fields.data.email).to.exist;",
-							"//     pm.expect(Fields.data.first_name).to.exist;",
-							"//     pm.expect(Fields.data.last_name).to.exist;",
-							"//     pm.expect(Fields.data.avatar).to.exist;",
-							"// });",
+							"pm.test(\"Checking if fields: id, email, first_name, last_name and avatar exists\", function () {",
+							"    var Fields = pm.response.json();",
+							"    pm.expect(Fields.data.id).to.exist;",
+							"    pm.expect(Fields.data.email).to.exist;",
+							"    pm.expect(Fields.data.first_name).to.exist;",
+							"    pm.expect(Fields.data.last_name).to.exist;",
+							"    pm.expect(Fields.data.avatar).to.exist;",
+							"});",
 							"pm.test(\"Checking correct email format \", function(){",
 							"    var mail=pm.response.json();",
 							"    let emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;",
@@ -797,6 +797,25 @@
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "hgfjjn",
+			"id": "1036b99a-b1fa-4f12-8b7e-37404c94d7fc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"url": "{{base_url}}api/users/{{UserId}}"
 			},
 			"response": []
 		}
