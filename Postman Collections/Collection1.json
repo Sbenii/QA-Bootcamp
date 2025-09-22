@@ -212,6 +212,68 @@
 			"response": []
 		},
 		{
+			"name": "List all resources",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "18b9cb68-1273-4616-9a27-855e1b8b5e27",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"If a user called cerulean exists\", function () {",
+							"    var j = pm.response.json();",
+							"    var array=j.data;",
+							"    let cerulean=false;",
+							"    for (let i=0;i<array.length;++i){",
+							"        if (array[i].name=='cerulean'){",
+							"            cerulean=true;",
+							"            break;",
+							"        }",
+							"        if (array[i].name=='cerulean'){",
+							"            cerulean=true;",
+							"            break;",
+							"        }",
+							"        ",
+							"    }",
+							"    pm.expect(cerulean).to.eql(true)",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e48fd1a6-dc5d-42b0-b051-cfed72db7d1d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "115d798e-b6ed-4400-92be-546be0e390fd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"url": "{{base_url}}api/unknown"
+			},
+			"response": []
+		},
+		{
 			"name": "List single resource",
 			"id": "e234301b-5c2f-4acc-900d-fc8c05f4bc3d",
 			"protocolProfileBehavior": {
@@ -684,18 +746,6 @@
 						}
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "List all resources",
-			"id": "115d798e-b6ed-4400-92be-546be0e390fd",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": []
 			},
 			"response": []
 		}
