@@ -222,6 +222,9 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
+							"var resourcename=pm.response.json();",
+							"let resource2name=resourcename.data[1].name;",
+							"pm.environment.set(\"r2name\", resource2name);",
 							"pm.test(\"If a users called cerulean and true red exist\", function () {",
 							"    var j = pm.response.json();",
 							"    var array=j.data;",
@@ -275,6 +278,34 @@
 		},
 		{
 			"name": "List single resource",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9b58b02f-dacb-45ba-9ad1-936d1865bf34",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"let rename=pm.environment.get(\"r2name\");",
+							"pm.test(\"Correct name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.data.name).to.eql(rename);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bce60dc5-f767-46d4-bdc3-90525abe6bfd",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "e234301b-5c2f-4acc-900d-fc8c05f4bc3d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
