@@ -686,6 +686,18 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "List all resources",
+			"id": "115d798e-b6ed-4400-92be-546be0e390fd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
