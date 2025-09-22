@@ -748,7 +748,8 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"});"
+							"});",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -758,8 +759,11 @@
 					"listen": "prerequest",
 					"script": {
 						"id": "67055c9c-94d5-4c93-b46a-ce327945cb76",
-						"exec": [],
-						"type": "text/javascript"
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -799,7 +803,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "8e1b6c94-cf53-4b99-b6f3-b1faecad5912",
+				"id": "2a6f2e38-660e-4080-98b1-d49aefc47356",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -810,12 +814,17 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "836245a2-9934-400f-91c3-b6b3031559db",
+				"id": "3edae236-0977-408d-9ab1-8f16c9d7a33f",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
-					"pm.test(\"Response time is less than 1 sec\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+					"pm.test(\"Response Time is less than 1 second\", function () {",
+					"const currentRequestName = pm.info.requestName;",
+					"if (currentRequestName === \"Delayed Response\") {",
+					"console.log(\"Skipping 'Response Time is less than 1 second' test for this request.\");",
+					"return;",
+					"}",
+					"pm.expect(pm.response.responseTime).to.be.below(1000);",
 					"});"
 				]
 			}
