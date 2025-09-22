@@ -117,7 +117,15 @@
 							"    pm.expect(Fields.data.last_name).to.exist;",
 							"    pm.expect(Fields.data.avatar).to.exist;",
 							"});",
-							"pm.test()"
+							"pm.test(\"Checking correct email format \", function(){",
+							"    var mail=pm.response.json();",
+							"    let emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;",
+							"    pm.expect(mail.data.email).to.match(emailRegex)",
+							"})",
+							"pm.test(\"Y\", function () {",
+							"    var userid = pm.response.json();",
+							"    pm.expect(jsonData.value).to.eql(100);",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -128,7 +136,7 @@
 					"script": {
 						"id": "b946df14-d66e-4bab-9b20-adc8987576f5",
 						"exec": [
-							""
+							"pm.environment.set(\"UserId\", 2);"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -148,7 +156,7 @@
 						"type": "text"
 					}
 				],
-				"url": "{{base_url}}api/users/2"
+				"url": "{{base_url}}api/users/{{UserId}}"
 			},
 			"response": []
 		},
